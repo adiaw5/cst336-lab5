@@ -66,7 +66,7 @@ getRondomImages: function (keyword, imageCount)
   // Function returns the  the connection
   createConnection: function()
   {
-    var conn = mysql.createConnection(
+    var conn = mysql.createPool(
   {
     host:"us-cdbr-iron-east-02.cleardb.net",
     user:"b11703dbb8d26f",
