@@ -1,0 +1,22 @@
+<% include partials/header.ejs %>
+</head>
+<body>
+   <h1>
+     search results
+    </h1>  
+    <form  action="/search">
+      <input placeholder="Type keyword" id="keyword" type="text" value="<%=keyword%>" name="keyword">
+      <button>Search</button>     
+      <a id="favLink" href="/displayKeyword">See Favorites</a>
+    </form> 
+      <% imageURLs.forEach(function(imageURL, index){ %>
+    
+  <%- (index%3==0)?'<br>':''%>
+  <div class="imageCountainer">    
+    <img class="image" src="<%=imageURL%>" width="200" height="200"> 
+    <img src="img/favorite.png" class="favoriteIcon" width="20"> 
+ </div>
+
+  <% }) %>  
+  
+<% include partials/footer.ejs %>
