@@ -68,10 +68,10 @@ getRondomImages: function (keyword, imageCount)
   {
     var conn = mysql.createConnection(
   {
-    host:"localhost",
-    user:"root",
-    password: "",
-    database: "img_gallery"    
+    host:"us-cdbr-iron-east-02.cleardb.net",
+    user:"b11703dbb8d26f",
+    password: "aaf02e3d",
+    database: "heroku_c17da31e3db1a8c"    
   });    
   return conn; 
   }  
