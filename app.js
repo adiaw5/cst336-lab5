@@ -52,6 +52,7 @@ app.get("/api/updateFavorite", async function(req, res)
     }); //Query   
   });// connection
   res.send("it works")
+   res.close(); 
 });//updateFavorite
 
 app.get("/displayKeyword", async function(req, res)
@@ -71,6 +72,7 @@ app.get("/displayKeyword", async function(req, res)
         console.log(result);      
       }); //Query  
     });//updateFavorite
+    res.close(); 
   });
 
 app.get("/api/displayFavorites", async function(req, res)
@@ -90,9 +92,11 @@ app.get("/api/displayFavorites", async function(req, res)
       //res.render("favorites", {"rows": results, "imageURLs": imageURLs});
       //console.log(results);
       res.send(results);
-         
+      
      }); //Query
+    
    });//updateFavorite  
+   res.close(); 
 });
 
 
